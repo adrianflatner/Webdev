@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prosjekt 1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">
+            <div id="title">
+                <h1>OF MOVEMENT AND EXPRESSION</h1>
+                <h2>by Jalaquan</h2>
+                <button class="button" onclick="showInfo()">+</button>
+            </div>
+            <div id="info">Jalaquan is a master on SVG and CANVAS in the art department of the firm "Balls and
+                movement".
+                Please enjoy his art.</div>
+        </div>
+        <div class="box box2">
+            <div id="svgg">
+                <svg id="svgid">
+                    <polygon points="0,0 0,30, 40,40 30,0" style="fill:#a64ac9;" />
+                    <polygon points="500,0 500,30, 460,40 470,0" style="fill:#fccd04;" />
+                    <polygon points="0,300 0,270, 40,260 30,300" style="fill:#ffb48f;" />
+                    <polygon points="500,300 500,270, 460,260 470,300" style="fill:#f5e6cc;" />
+                </svg>
+                <script src="scripts/scalablevector.js"></script>
+                <h3>SVG - INFINITY ART</h3>
+            </div>
+            <div id="canvass">
+                <canvas></canvas>
+                <script src="scripts/canvas.js"></script>
+                <h3>CANVAS - INFINITY ART RANDOM RADIUS</h3>
+            </div>
+        </div>
+        <div id="instr">
+            <button id="instructionButton" class="button" onclick="showTutorial()">i</button>
+            <p id="instruction">*Do mouseovers on the pictures for speed, and click on them to slow down or stop.</p>
+        </div>
+        <div class="box box3">
+            <button class="collapsible" onclick="showDocumentation()">Open documentation</button>
+            <div class="content">
+                <div id="placer">
+                    <h3>CSS-grid:</h3>
+                    <p>I have used CSS-grid to structure my website. The reason for not using Flexbox is the
+                        possibility to
+                        structure over columns in CSS-grid. The website has a grid to structure the different sections.
+                        Inside section two there exists a new grid to split the animations. It is possible to only use
+                        one
+                        grid
+                        for the whole page, but this structure is used for learning purposes and more control over each
+                        section.</p>
+                    <h3>Canvas:</h3>
+                    <p>The canvas is made using JavaScript to keep the code on the same document. I chose to
+                        make a
+                        frame to make the reader interact. When the reader does a mouseover,
+                        the
+                        code executes. The animation is made using circles which changes position,
+                        and through easy manipulation and loops seems like lines crashing in the canvas walls. If the
+                        reader does multiple mouseovers the lines speed up, and the reader can slow down the random
+                        masterpiece by clicking on the canvas. Both animations uses some code from the tutorial listed
+                        in sources. This applies only to the functions to get circles to crash the walls. </p>
+                    <h3>SVG:</h3>
+                    <p>The SVG is made in a similar way to the canvas. Key differences are how the shapes are made. It's
+                        no
+                        longer strokes, and are now directly added to the frame. Here too I decided to not clear the
+                        image when the balls move. This makes the picture seem like a
+                        neverending
+                        canvas for art. What I never anticipated was that with neverending SVG(neverending vectors) the
+                        animation of course started to lag. I decided to let it be, to show the key differences in
+                        animation for svg versus canvas. As with the canvas, the reader can slow down the animation by
+                        mouse click. To make the programming of the frame simpler, the shapes for the frame is directly
+                        added in the index.html document.</p>
+                    <h3>jQuery:</h3>
+                    <p>The fast jQuery JavaScript library is used in all JavaScript files. This applies when doing
+                        DOM-manipulation, event handling and animation
+                        in the documents. This means for instance when I
+                        otherwise would use "document.getElementById", or when css has to be changed and similar.</p>
+                    <h3>Cross-browser testing:</h3>
+                    <p>The website is testet in Chrome, Safari and Edge. The same behavior is observed on all the
+                        mentioned browsers.</p>
+                    <h3>Sources:</h3>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp">Help hiding
+                                elements</a></li>
+                        <li><a href="https://www.w3schools.com/howto/howto_js_collapsible.asp">Help collapsible</a></li>
+                        <li><a href="https://www.w3schools.com/jquery/">Intro to jQuery</a></li>
+                        <li><a
+                                href="https://www.youtube.com/watch?v=EO6OkltgudE&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL">This
+                                series for help and inspiration on the art</a>
+                        </li>
+                        <li><a href="https://www.w3schools.com/graphics/svg_intro.asp">Tutorial for svg</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script src="scripts/Collapsible.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
